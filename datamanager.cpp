@@ -21,12 +21,6 @@ void DataManager::onNetworkAccessManagerFinished(QNetworkReply*reply)
     auto index= newStr.find(";");
     auto lastIndex=newStr.find("&",index);
     newStr= newStr.substr(index+1,--lastIndex-index);
-    while(index!=std::string::npos)
-    {
-        index=newStr.find(",");
-        newStr.insert(index+1,"\n");
-    }
-
     setString(QString::fromStdString(newStr));
     qDebug()<<String;
     qDebug()<<response;
