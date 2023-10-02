@@ -4,7 +4,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 Window {
-    width: 1024
+    width: 1324
     height: 700
     visible: true
     title: qsTr("Liker")
@@ -32,7 +32,7 @@ Window {
             {
                 Layout.alignment: Qt.AlignHCenter
                 width: parent.width
-                text: "HOME"
+                text: "HOME/REFRESH"
                 font.pixelSize: 24
                 font.bold: false
 
@@ -42,6 +42,7 @@ Window {
                     hoverEnabled: true
                     onClicked:
                     {
+                        manager.onHomeClicked()
                         btn1.color="pink"
                         btn2.color="white"
                         btn3.color="white"
@@ -75,6 +76,7 @@ Window {
                     hoverEnabled: true
                     onClicked:
                     {
+                        manager.onAboutClicked()
                         btn2.color="pink"
                         btn1.color="white"
                         btn3.color="white"
@@ -110,6 +112,7 @@ Window {
                     hoverEnabled: true
                     onClicked:
                     {
+                        manager.onQuitClicked()
                         btn3.color="pink"
                         btn2.color="white"
                         btn1.color="white"
@@ -144,6 +147,7 @@ Window {
                     hoverEnabled: true
                     onClicked:
                     {
+                        manager.onProfileClicked()
                         btn4.color="pink"
                         btn2.color="white"
                         btn3.color="white"
