@@ -10,7 +10,7 @@ Window {
     title: qsTr("Liker")
     color: "black"
     Component.onCompleted: {
-
+        showFullScreen()
     }
     Rectangle {
         id: topBar
